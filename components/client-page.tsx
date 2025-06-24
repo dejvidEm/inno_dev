@@ -243,7 +243,7 @@ const Header = () => {
           <>
             {isMobile ? (
               <motion.div
-                className="fixed top-16 left-0 right-0 bg-black/80 backdrop-blur-md z-50 p-4 shadow-lg"
+                className="fixed top-20 left-0 right-0 bg-black/80 backdrop-blur-md z-50 p-4 shadow-lg"
                 variants={mobileMenuVariants}
                 initial="hidden"
                 animate="visible"
@@ -356,7 +356,7 @@ const HeroSection = () => {
           {t.heroTitle}
         </motion.h1>
         <motion.p
-          className="mt-4 max-w-2xl text-lg md:text-xl text-gray-300"
+          className="mt-4 max-w-2xl text-md md:text-xl text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
