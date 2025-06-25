@@ -62,6 +62,12 @@ const reviewsData: Review[] = [
   { id: "review4", textKey: "review4Text", nameKey: "review4Name", rating: 5 },
 ]
 
+const pricingData = [
+  { service: "Pánsky strih", price: "33€", duration: "30 min" },
+  { service: "Combo strih + brada", price: "49€", duration: "50 min" },
+  { service: "Úprava brady", price: "19€", duration: "30 min" },
+]
+
 const AnimatedSection = ({
   children,
   className = "",
@@ -400,6 +406,51 @@ const AboutSection = ({
         >
           {t.aboutText}
         </p>
+      </div>
+    </AnimatedSection>
+  )
+}
+
+const PricingSection = () => {
+  return (
+    <AnimatedSection id="pricing" className="bg-white">
+      <div className="w-full max-w-2xl mx-auto text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-zinc-900">
+          Pricing
+        </h2>
+        <div className="mt-4 h-1 w-24 mx-auto md:mx-0 bg-beige-400" />
+        <p className="mt-8 mb-8 max-w-2xl mx-auto md:mx-0 text-zinc-700 md:text-lg">
+          Transparent, fair pricing for every service. No surprises.
+        </p>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
+          <table className="min-w-full text-left text-sm">
+            <thead>
+              <tr>
+                <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider">
+                  Service
+                </th>
+                <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider text-right">
+                  Price
+                </th>
+                <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider text-right hidden md:table-cell">
+                  Duration
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {pricingData.map((item, idx) => (
+                <tr key={item.service} className="border-t last:border-b-0 border-gray-100 hover:bg-beige-50 transition-colors">
+                  <td className="px-6 py-4 whitespace-nowrap text-zinc-900 font-medium">{item.service}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-zinc-700 text-right">
+                    <span className="md:hidden">{item.price} <span className="text-gray-400">·</span> <span>{item.duration}</span></span>
+                    <span className="hidden md:inline">{item.price}</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-zinc-700 text-right hidden md:table-cell">{item.duration}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </AnimatedSection>
   )
@@ -921,6 +972,7 @@ export function ClientPage() {
             sideImagePosition="right"
           />
         </div>
+        <PricingSection />
         <ParallaxBanner
           bgImage="/banner-bg.png"
           title={t.banner1Title}
