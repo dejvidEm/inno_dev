@@ -62,12 +62,6 @@ const reviewsData: Review[] = [
   { id: "review4", textKey: "review4Text", nameKey: "review4Name", rating: 5 },
 ]
 
-const pricingData = [
-  { service: "Pánsky strih", price: "33€", duration: "30 min" },
-  { service: "Combo strih + brada", price: "49€", duration: "50 min" },
-  { service: "Úprava brady", price: "19€", duration: "30 min" },
-]
-
 const AnimatedSection = ({
   children,
   className = "",
@@ -412,28 +406,37 @@ const AboutSection = ({
 }
 
 const PricingSection = () => {
+  const { t } = useLanguage()
+  
+  // Dynamic pricing data based on current language
+  const pricingData = [
+    { service: t.pricingHaircut, price: "33€", duration: "30 min" },
+    { service: t.pricingCombo, price: "49€", duration: "50 min" },
+    { service: t.pricingBeard, price: "19€", duration: "30 min" },
+  ]
+
   return (
     <AnimatedSection id="pricing" className="bg-white">
       <div className="w-full max-w-2xl mx-auto text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-zinc-900">
-          Pricing
+          {t.pricingTitle}
         </h2>
         <div className="mt-4 h-1 w-24 mx-auto md:mx-0 bg-beige-400" />
         <p className="mt-8 mb-8 max-w-2xl mx-auto md:mx-0 text-zinc-700 md:text-lg">
-          Transparent, fair pricing for every service. No surprises.
+          {t.pricingSubtitle}
         </p>
         <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
           <table className="min-w-full text-left text-sm">
             <thead>
               <tr>
                 <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider">
-                  Service
+                  {t.pricingService}
                 </th>
                 <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider text-right">
-                  Price
+                  {t.pricingPrice}
                 </th>
                 <th className="px-6 py-4 font-semibold text-zinc-700 uppercase tracking-wider text-right hidden md:table-cell">
-                  Duration
+                  {t.pricingDuration}
                 </th>
               </tr>
             </thead>
@@ -601,7 +604,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                 onClick={() => handleToggle(barber.name)}
               >
                 <div
-                  className={`relative h-64 w-64 rounded-none overflow-hidden group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`} // Changed to square (h-64 w-64) and removed rounded-full
+                  className={`relative h-96 w-64 rounded-none overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`} // Changed to square (h-64 w-64) and removed rounded-full
                 >
                   <Image
                     src={barber.imgSrc || "/placeholder.svg"} // Using new image path
@@ -610,6 +613,9 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                     style={{ objectFit: "cover" }}
                     className="grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-110" // Grayscale effect
                   />
+                  <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                    <p className="text-5xl text-black opacity-30 font-black drop-shadow-lg">Detail</p>
+                  </div>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
                 </div>
                 <h3 className={`mt-6 text-xl font-bold tracking-wide ${barberNameColor}`}>{barber.name}</h3>
@@ -786,7 +792,7 @@ const ContactSection = ({
     <AnimatedSection
       id="contact"
       theme={theme}
-      sideImageSrc={"/photos/1.jpg"}
+      sideImageSrc={"/priestory/image2.jpeg"}
       sideImageAlt={sideImageAlt}
       sideImagePosition={sideImagePosition}
     >

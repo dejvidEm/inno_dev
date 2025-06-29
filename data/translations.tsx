@@ -40,6 +40,11 @@ const translations = {
     ctaBannerButton: "Book Appointment",
     footerQuickLinks: "Quick Links",
     footerContactUs: "Contact Us",
+    cennikHeading: "Pricing",
+    cennikText: "Transparent, fair pricing for every service. No surprises.",
+    cennikSluzba: "Service",
+    cennikCena: "Price",
+    cennikTrvanie: "Duration"
   },
   sk: {
     navAbout: "O nás",
@@ -83,6 +88,11 @@ const translations = {
     ctaBannerButton: "Rezervovať Termín",
     footerQuickLinks: "Rýchle Odkazy",
     footerContactUs: "Kontaktujte Nás",
+    cennikHeading: "Cennik",
+    cennikText: "Transparentné a férové ceny za každú službu. Žiadne prekvapenia.",
+    cennikSluzba: "Služba",
+    cennikCena: "Cena",
+    cennikTrvanie: "Trvanie"
   },
 }
 

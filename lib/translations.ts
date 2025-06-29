@@ -40,6 +40,14 @@ export const translations = {
     ctaBannerButton: "Book Appointment", // New
     footerQuickLinks: "Quick Links", // New
     footerContactUs: "Contact Us", // New
+    pricingTitle: "Pricing",
+    pricingSubtitle: "Transparent, fair pricing for every service. No surprises.",
+    pricingService: "Service",
+    pricingPrice: "Price",
+    pricingDuration: "Duration",
+    pricingHaircut: "Men's Haircut",
+    pricingCombo: "Combo Haircut + Beard",
+    pricingBeard: "Beard Trim",
   },
   sk: {
     navAbout: "O nás",
@@ -83,5 +91,13 @@ export const translations = {
     ctaBannerButton: "Rezervovať Termín", // New
     footerQuickLinks: "Rýchle Odkazy", // New
     footerContactUs: "Kontaktujte Nás", // New
+    pricingTitle: "Cenník",
+    pricingSubtitle: "Transparentné, férové ceny pre každú službu. Žiadne prekvapenia.",
+    pricingService: "Služba",
+    pricingPrice: "Cena",
+    pricingDuration: "Doba",
+    pricingHaircut: "Pánsky strih",
+    pricingCombo: "Combo strih + brada",
+    pricingBeard: "Úprava brady",
   },
 }
