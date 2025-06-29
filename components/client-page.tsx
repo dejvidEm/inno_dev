@@ -35,15 +35,15 @@ type Theme = "light" | "dark"
 // Updated barbersData with new image paths
 const barbersData: Barber[] = [
   {
-    name: "Lukáš ”Lucas” Kocian",
+    name: "Lukáš \"Lucas\" Kocian",
     specialty: "Classic Cuts & Fades",
-    imgSrc: "/pics/lukas.png", // Updated image path
+    imgSrc: "/photos/lukas.jpeg", // Updated image path
     bio: "Volám sa Lukáš, som barber s vášňou pre detail, presnosť a štýl. Vlasy a fúzy nie sú len moja práca - je to remeslo, ktoré ma baví každý deň. Verím, že dobrý strih dokáže zmeniť deň aj sebavedomie. V kresle u mňa nájdeš kvalitu, pokoj a čistý štýl.",
   },
   {
-    name: "Dominik “Rynik” Rybár",
+    name: "Dominik \"Rynik\" Rybár",
     specialty: "Modern Styles & Beard Trims",
-    imgSrc: "/pics/rynik.png", // Updated image path
+    imgSrc: "/photos/rynik.jpeg", // Updated image path
     bio: "Barber život žijem naplno už 8 rokov. Mám rád čisté prechody, poctivú prácu a ten pocit, keď klient odchádza s úsmevom. Každý strih je pre mňa originál. Či si ideš klasiku, fade, alebo fresh look – u mňa si na správnom mieste.",
   },
 ]
@@ -210,7 +210,7 @@ const Header = () => {
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.1 + 0.2, duration: 0.4, ease: "easeOut" },
+      transition: { delay: i * 0.1 + 0.2, duration: 0.4, ease: "easeOut" as const },
     }),
   }
   const [scrolled, setScrolled] = useState(false)
@@ -589,7 +589,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
           {barbersData.slice(0, 2).map((barber, index) => (
             <motion.div
               key={barber.name}
-              className="relative overflow-hidden flex flex-col items-center h-[32rem] pt-12 group" // Added group here
+              className="relative overflow-hidden flex flex-col items-center h-[40rem] pt-12 group" // Increased height for bigger images
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -601,7 +601,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                 onClick={() => handleToggle(barber.name)}
               >
                 <div
-                  className={`relative h-48 w-48 rounded-full overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`}
+                  className={`relative h-64 w-64 rounded-none overflow-hidden group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`} // Changed to square (h-64 w-64) and removed rounded-full
                 >
                   <Image
                     src={barber.imgSrc || "/placeholder.svg"} // Using new image path
@@ -622,24 +622,24 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 bg-zinc-900/95 p-4 text-white flex flex-col justify-between items-center text-center"
+                    className="absolute inset-0 bg-zinc-900/95 p-6 text-white flex flex-col justify-between items-center text-center" // Increased padding
                   >
                     <>
-                      <div className="flex flex-col items-center text-center w-full max-w-xs">
-                        <h3 className="text-2xl font-bold tracking-tight text-white mb-1">{barber.name}</h3>
-                        <p className="text-sm text-gray-300 mb-3">{barber.specialty}</p>
-                        <div className="my-2 h-px w-16 bg-gray-500 mx-auto" />
+                      <div className="flex flex-col items-center text-center w-full max-w-sm"> {/* Increased max-width */}
+                        <h3 className="text-3xl font-bold tracking-tight text-white mb-2">{barber.name}</h3> {/* Increased text size */}
+                        <p className="text-base text-gray-300 mb-4">{barber.specialty}</p> {/* Increased text size */}
+                        <div className="my-3 h-px w-20 bg-gray-500 mx-auto" /> {/* Increased width */}
                       </div>
-                      <div className="w-full max-w-xs text-center py-2 my-2">
-                        <h4 className="font-semibold text-xs uppercase tracking-wider text-gray-400 mb-1">
+                      <div className="w-full max-w-sm text-center py-4 my-4"> {/* Increased max-width and padding */}
+                        <h4 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-2"> {/* Increased text size */}
                           {t.drawerBio}
                         </h4>
-                        <p className="text-gray-200 text-sm leading-relaxed">{barber.bio}</p>
+                        <p className="text-gray-200 text-base leading-relaxed">{barber.bio}</p> {/* Increased text size */}
                       </div>
-                      <div className="w-full max-w-xs mt-2">
+                      <div className="w-full max-w-sm mt-4"> {/* Increased max-width */}
                         <Button
                           variant="outline"
-                          size="sm"
+                          size="lg" // Changed from sm to lg
                           onClick={() => handleToggle(barber.name)}
                           className="border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-zinc-900 w-full"
                         >
@@ -875,7 +875,7 @@ const CallToActionBanner = ({ outerRef }: { outerRef?: React.Ref<HTMLDivElement>
         <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">{t.ctaBannerSubtitle}</p>
         <Button
           asChild
-          size="xl"
+          size="lg"
           className="mt-10 bg-white text-black hover:bg-gray-200 font-bold uppercase tracking-wider px-10 py-4 text-lg"
         >
           <Link href="https://bookio.com" target="_blank" rel="noopener noreferrer">
