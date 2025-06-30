@@ -51,7 +51,7 @@ export const translations = {
   },
   sk: {
     navAbout: "O nás",
-    navBarbers: "Holiči",
+    navBarbers: "Barberi",
     navContact: "Kontakt",
     navReviews: "Recenzie",
     heroTitle: "Precision. Presence. Peace.",

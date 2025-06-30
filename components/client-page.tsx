@@ -18,6 +18,7 @@ import {
   Quote,
   ChevronLeft,
   ChevronRight,
+  Instagram,
 } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 import { useMobile } from "@/hooks/use-mobile"
@@ -25,26 +26,26 @@ import type translations from "@/data/translations"
 
 export type Barber = {
   name: string
-  specialty: string
+  instagram: string
   imgSrc: string
   bio: string
 }
 
 type Theme = "light" | "dark"
 
-// Updated barbersData with new image paths
+// Updated barbersData with Instagram links
 const barbersData: Barber[] = [
   {
     name: "Lukáš \"Lucas\" Kocian",
-    specialty: "Classic Cuts & Fades",
+    instagram: "https://www.instagram.com/lukaskocian_/",
     imgSrc: "/photos/lukas.jpeg", // Updated image path
-    bio: "Volám sa Lukáš, som barber s vášňou pre detail, presnosť a štýl. Vlasy a fúzy nie sú len moja práca - je to remeslo, ktoré ma baví každý deň. Verím, že dobrý strih dokáže zmeniť deň aj sebavedomie. V kresle u mňa nájdeš kvalitu, pokoj a čistý štýl.",
+    bio: 'Ahojte, moje meno je Lukáš "Lucas" Kocian. Pochádzam zo Žiliny a barberingu sa venujem od roku 2020. Môžem o sebe povedať, že som veľmi kreatívny workoholik a mám veľký cit pre detail. Na barberingu ma zaujala práca s ľuďmi, kreativita a nekonečné zlepšovanie sa v tomto remesle. Barbering je pre mňa životný štýl. Neexistuje strih, ktorý strihám najradšej. Či je to strojčekový alebo nožnicový strih, každý jeden mám v obľube. Úspešne som absolvoval školenia od Alana Beaka a Hayden Cassidy a od tímu MENSPIRE.',
   },
   {
     name: "Dominik \"Rynik\" Rybár",
-    specialty: "Modern Styles & Beard Trims",
+    instagram: "https://www.instagram.com/ry.nik_/",
     imgSrc: "/photos/rynik.jpeg", // Updated image path
-    bio: "Barber život žijem naplno už 8 rokov. Mám rád čisté prechody, poctivú prácu a ten pocit, keď klient odchádza s úsmevom. Každý strih je pre mňa originál. Či si ideš klasiku, fade, alebo fresh look – u mňa si na správnom mieste.",
+    bio: 'Volám sa Dominik "Rynik" Rybar, som barber, ktorý miluje moderné účesy a precíznu prácu s nožnicami aj strojčekom. Barberingu sa venujem od strednej školy. Svoje zručnosti som zdokonaľoval na prestížnych školeniach pod vedením odborníkov ako Alan Beak, Hayden Cassidy a Menspire a mnoho ďalších. Vďaka týmto skúsenostiam prinášam klientom nielen štýlové a precízne strihy, ale aj individuálny prístup a servis na najvyššej úrovni. V Innostudio spájam minimalizmus s kvalitou, aby každý od nás odchádzal sebavedomý a spokojný.',
   },
 ]
 
@@ -115,7 +116,7 @@ const AnimatedSection = ({
             className="w-full md:w-1/2 flex items-center justify-center mt-12 md:mt-0"
             style={{ x: imageX, opacity: imageOpacity }}
           >
-            <div className="relative w-[280px] h-[420px] sm:w-[300px] sm:h-[450px] lg:w-[350px] lg:h-[525px]">
+            <div className="relative w-[280px] h-[420px] sm:w-[300px] sm:h-[450px] lg:w-[400px] lg:h-[555px]">
               <Image
                 src={sideImageSrc || "/placeholder.svg"}
                 alt={sideImageAlt}
@@ -191,22 +192,6 @@ const Header = () => {
     return () => window.removeEventListener("hashchange", handleRouteChange, false)
   }, [])
 
-  const menuVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.3 } },
-  }
-  const mobileMenuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  }
-  const desktopNavItemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: i * 0.1 + 0.2, duration: 0.4, ease: "easeOut" as const },
-    }),
-  }
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
   useMotionValueEvent(scrollY, "change", (latest) => setScrolled(latest > 10))
@@ -221,80 +206,67 @@ const Header = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="container mx-auto flex items-center justify-between">
-          <Link href="#hero" className="flex items-center gap-2 text-white z-[61]" onClick={closeMenu}>
-            <img src="/pics/new.png" alt="" className="w-28"/>
-          </Link>
-          <div className="flex items-center gap-4">
+        <div className="container mx-auto flex items-center justify-between relative">
+          {/* Logo left */}
+          <div className="flex-1 flex items-center min-w-0">
+            <Link href="#hero" className="flex items-center gap-2 text-white z-[61]" onClick={closeMenu}>
+              <img src="/pics/new.png" alt="" className="w-28"/>
+            </Link>
+          </div>
+          {/* Center nav links (desktop only) */}
+          {!isMobile && (
+            <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-white hover:text-beige-200 transition-colors font-medium text-base uppercase tracking-wide"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          )}
+          {/* Right side: language switcher and (mobile) burger */}
+          <div className="flex-1 flex items-center justify-end gap-4 min-w-0">
             <LanguageSwitcher className="hidden sm:flex z-[61]" />
-            <motion.button
-              onClick={toggleMenu}
-              className="text-white z-[61] p-2"
-              whileTap={{ scale: 0.9 }}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <CloseIcon size={28} /> : <Menu size={28} />}
-            </motion.button>
+            {/* Mobile burger menu button */}
+            {isMobile && (
+              <motion.button
+                onClick={toggleMenu}
+                className="text-white z-[61] p-2"
+                whileTap={{ scale: 0.9 }}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <CloseIcon size={28} /> : <Menu size={28} />}
+              </motion.button>
+            )}
           </div>
         </div>
       </motion.header>
+      {/* Mobile menu overlay */}
       <AnimatePresence>
-        {isMenuOpen && (
-          <>
-            {isMobile ? (
-              <motion.div
-                className="fixed top-20 left-0 right-0 bg-black/80 backdrop-blur-md z-50 p-4 shadow-lg"
-                variants={mobileMenuVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-              >
-                <nav className="flex flex-col items-center gap-4">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="text-gray-200 hover:text-white transition-colors text-lg py-2"
-                      onClick={closeMenu}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                  <LanguageSwitcher className="sm:hidden mt-2" />
-                </nav>
-              </motion.div>
-            ) : (
-              <motion.div
-                className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex flex-col items-center justify-center p-8 overflow-hidden"
-                variants={menuVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-              >
-                <nav className="flex flex-col items-center justify-center text-center h-full">
-                  {navItems.map((item, i) => (
-                    <motion.div
-                      key={item.href}
-                      custom={i}
-                      variants={desktopNavItemVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                    >
-                      <Link
-                        href={item.href}
-                        className="text-5xl md:text-7xl font-extrabold text-white hover:text-gray-400 transition-colors my-3 md:my-4 block tracking-tighter uppercase"
-                        onClick={closeMenu}
-                      >
-                        {item.label}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </nav>
-                <LanguageSwitcher className="sm:hidden absolute bottom-8" />
-              </motion.div>
-            )}
-          </>
+        {isMenuOpen && isMobile && (
+          <motion.div
+            className="fixed top-20 left-0 right-0 bg-black/80 backdrop-blur-md z-50 p-4 shadow-lg"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <nav className="flex flex-col items-center gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-200 hover:text-white transition-colors text-lg py-2"
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <LanguageSwitcher className="sm:hidden mt-2" />
+            </nav>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
@@ -388,11 +360,11 @@ const AboutSection = ({
     <AnimatedSection
       id="about"
       theme={theme}
-      sideImageSrc={"/photos/4.jpg"}
+      sideImageSrc={"/priestory/image3.jpeg"}
       sideImageAlt={sideImageAlt}
       sideImagePosition={sideImagePosition}
     >
-      <div className="text-center md:text-left">
+      <div className="text-center md:text-left border-b-2 pb-2">
         <h2 className={`text-3xl md:text-4xl font-bold tracking-tight uppercase ${headingColor}`}>{t.aboutTitle}</h2>
         <div className={`mt-4 h-1 w-24 ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} ${hrColor}`} />
         <p
@@ -421,10 +393,7 @@ const PricingSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-zinc-900">
           {t.pricingTitle}
         </h2>
-        <div className="mt-4 h-1 w-24 mx-auto md:mx-0 bg-beige-400" />
-        <p className="mt-8 mb-8 max-w-2xl mx-auto md:mx-0 text-zinc-700 md:text-lg">
-          {t.pricingSubtitle}
-        </p>
+        <div className="mt-1 mb-8 h-1 w-24 mx-auto md:mx-0 bg-beige-400" />
         <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
           <table className="min-w-full text-left text-sm">
             <thead>
@@ -592,7 +561,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
           {barbersData.slice(0, 2).map((barber, index) => (
             <motion.div
               key={barber.name}
-              className="relative overflow-hidden flex flex-col items-center h-[40rem] pt-12 group" // Increased height for bigger images
+              className="relative overflow-hidden flex flex-col items-center h-[40rem] pt-12 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -604,14 +573,14 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                 onClick={() => handleToggle(barber.name)}
               >
                 <div
-                  className={`relative h-96 w-64 rounded-none overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`} // Changed to square (h-64 w-64) and removed rounded-full
+                  className={`relative h-96 w-64 rounded-none overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`}
                 >
                   <Image
-                    src={barber.imgSrc || "/placeholder.svg"} // Using new image path
+                    src={barber.imgSrc || "/placeholder.svg"}
                     alt={`Portrait of ${barber.name}`}
                     fill
                     style={{ objectFit: "cover" }}
-                    className="grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-110" // Grayscale effect
+                    className="grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-110"
                   />
                   <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                     <p className="text-5xl text-black opacity-30 font-black drop-shadow-lg">Detail</p>
@@ -619,7 +588,17 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
                 </div>
                 <h3 className={`mt-6 text-xl font-bold tracking-wide ${barberNameColor}`}>{barber.name}</h3>
-                <p className={`${specialtyColor}`}>{barber.specialty}</p>
+                <a
+                  href={barber.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 flex items-center gap-2 text-pink-500 hover:text-pink-600 transition-colors"
+                  onClick={e => e.stopPropagation()}
+                  aria-label={`Instagram ${barber.name}`}
+                >
+                  <Instagram size={24} />
+                  <span className="sr-only">Instagram</span>
+                </a>
               </div>
               <AnimatePresence>
                 {expandedBarber === barber.name && (
@@ -628,24 +607,34 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 bg-zinc-900/95 p-6 text-white flex flex-col justify-between items-center text-center" // Increased padding
+                    className="absolute inset-0 bg-zinc-900/95 p-6 text-white flex flex-col justify-between items-center text-center"
                   >
                     <>
-                      <div className="flex flex-col items-center text-center w-full max-w-sm"> {/* Increased max-width */}
-                        <h3 className="text-3xl font-bold tracking-tight text-white mb-2">{barber.name}</h3> {/* Increased text size */}
-                        <p className="text-base text-gray-300 mb-4">{barber.specialty}</p> {/* Increased text size */}
-                        <div className="my-3 h-px w-20 bg-gray-500 mx-auto" /> {/* Increased width */}
+                      <div className="flex flex-col items-center text-center w-full max-w-sm">
+                        <h3 className="text-3xl font-bold tracking-tight text-white mb-2">{barber.name}</h3>
+                        <a
+                          href={barber.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mb-4 flex items-center gap-2 text-pink-500 hover:text-pink-600 transition-colors"
+                          aria-label={`Instagram ${barber.name}`}
+                          onClick={e => e.stopPropagation()}
+                        >
+                          <Instagram size={24} />
+                          <span className="sr-only">Instagram</span>
+                        </a>
+                        <div className="my-3 h-px w-20 bg-gray-500 mx-auto" />
                       </div>
-                      <div className="w-full max-w-sm text-center py-4 my-4"> {/* Increased max-width and padding */}
-                        <h4 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-2"> {/* Increased text size */}
+                      <div className="w-full max-w-sm text-center py-4 my-4">
+                        <h4 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-2">
                           {t.drawerBio}
                         </h4>
-                        <p className="text-gray-200 text-base leading-relaxed">{barber.bio}</p> {/* Increased text size */}
+                        <p className="text-gray-200 text-base leading-relaxed">{barber.bio}</p>
                       </div>
-                      <div className="w-full max-w-sm mt-4"> {/* Increased max-width */}
+                      <div className="w-full max-w-sm mt-4">
                         <Button
                           variant="outline"
-                          size="lg" // Changed from sm to lg
+                          size="lg"
                           onClick={() => handleToggle(barber.name)}
                           className="border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-zinc-900 w-full"
                         >
@@ -762,7 +751,7 @@ const ParallaxBanner = ({
           </motion.p>
           <motion.div style={{ opacity: contentOpacity }}>
             <Button asChild size="lg" className="mt-8 bg-white text-black hover:bg-gray-200 font-bold">
-              <Link href={buttonLink}>{buttonText}</Link>
+              <Link href={buttonLink} target="_blank">{buttonText}</Link>
             </Button>
           </motion.div>
         </div>
@@ -796,7 +785,7 @@ const ContactSection = ({
       sideImageAlt={sideImageAlt}
       sideImagePosition={sideImagePosition}
     >
-      <div className="text-center md:text-left">
+      <div className="text-center md:text-left border-b-2 pb-2">
         <h2 className={`text-3xl md:text-4xl font-bold tracking-tight uppercase ${headingColor}`}>{t.contactTitle}</h2>
         <div className={`mt-4 h-1 w-24 ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} ${hrColor}`} />
         <div className={`mt-12 max-w-md ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} space-y-6`}>
@@ -835,7 +824,7 @@ const BookNowButton = ({ isCtaVisible }: { isCtaVisible: boolean }) => {
             size="lg"
             className="bg-white text-black hover:bg-gray-200 rounded-full shadow-lg font-bold uppercase tracking-wider"
           >
-            <Link href="https://bookio.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://services.bookio.com/inno-studio/widget?lang=sk&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExRXQ2cll4cUNzTmVaalFEdwEeTmb7mAfmDSaY1TLHQS4seOYe-kBBufPJEBXbfxjAwMBkX1D5ThshZk81_CM_aem_5LLVmnf8SNa7ShPD8mf2bQ" target="_blank" rel="noopener noreferrer">
               {t.bookNow}
             </Link>
           </Button>
@@ -884,7 +873,7 @@ const CallToActionBanner = ({ outerRef }: { outerRef?: React.Ref<HTMLDivElement>
           size="lg"
           className="mt-10 bg-white text-black hover:bg-gray-200 font-bold uppercase tracking-wider px-10 py-4 text-lg"
         >
-          <Link href="https://bookio.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://services.bookio.com/inno-studio/widget?lang=sk&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExRXQ2cll4cUNzTmVaalFEdwEeTmb7mAfmDSaY1TLHQS4seOYe-kBBufPJEBXbfxjAwMBkX1D5ThshZk81_CM_aem_5LLVmnf8SNa7ShPD8mf2bQ" target="_blank" rel="noopener noreferrer">
             {t.ctaBannerButton}
           </Link>
         </Button>
@@ -964,6 +953,7 @@ export function ClientPage() {
   const { t } = useLanguage()
   const ctaBannerRef = useRef<HTMLDivElement | null>(null)
   const isCtaBannerInView = useInView(ctaBannerRef, { amount: 0.3, once: false })
+  const isMobile = useMobile()
 
   return (
     <div className="bg-black min-h-screen font-sans">
@@ -979,13 +969,15 @@ export function ClientPage() {
           />
         </div>
         <PricingSection />
-        <ParallaxBanner
-          bgImage="/banner-bg.png"
-          title={t.banner1Title}
-          text={t.banner1Text}
-          buttonText={t.bookNow}
-          buttonLink="https://bookio.com"
-        />
+        {!isMobile && (
+          <ParallaxBanner
+            bgImage="/banner-bg.png"
+            title={t.banner1Title}
+            text={t.banner1Text}
+            buttonText={t.bookNow}
+            buttonLink="https://services.bookio.com/inno-studio/widget?lang=sk&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExRXQ2cll4cUNzTmVaalFEdwEeTmb7mAfmDSaY1TLHQS4seOYe-kBBufPJEBXbfxjAwMBkX1D5ThshZk81_CM_aem_5LLVmnf8SNa7ShPD8mf2bQ"
+          />
+        )}
         <div className="bg-white text-zinc-900">
           <BarbersSection theme="light" />
         </div>
