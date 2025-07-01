@@ -21,7 +21,7 @@ export const translations = {
     drawerSpecialty: "Specialty",
     drawerBio: "Bio",
     drawerClose: "Close",
-    bookNow: "Book Now",
+    bookNow: "Book an appointment",
     learnMore: "Learn More",
     reviewsTitle: "Hear From Our Clients",
     review1Text:
@@ -71,7 +71,7 @@ export const translations = {
     drawerSpecialty: "Špecializácia",
     drawerBio: "Životopis",
     drawerClose: "Zavrieť",
-    bookNow: "Rezervovať",
+    bookNow: "Rezervovať termín",
     learnMore: "Zistiť viac",
     reviewsTitle: "Čo Hovoria Naši Klienti",
     review1Text:
