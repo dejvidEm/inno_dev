@@ -4,16 +4,16 @@ export const translations = {
     navBarbers: "Barbers",
     navContact: "Contact",
     navReviews: "Reviews",
-    heroTitle: "Precision. Presence. Peace.",
-    heroSubtitle: "Experience precision cuts and timeless style in a modern, minimalist setting.",
+    heroTitle: "Modern. Clean. Elegant.",
+    heroSubtitle: "Welcome to innostudio, a studio where style speaks for you.",
     aboutTitle: "Our Story",
     aboutText:
       "Founded in 2025, INNO Studio is more than just a barbershop; it's a sanctuary for the modern gentleman. We blend traditional techniques with contemporary styles, all within a space designed for relaxation and refinement. Our philosophy is simple: deliver unparalleled service and exceptional cuts, every single time.",
     barbersTitle: "Meet The Barbers",
     contactTitle: "Get In Touch",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",
-    contactPhone: "0911 123 456", // Added
-    contactEmail: "kontakt@innostudio.com", // Added
+    contactPhone: "0904 163 648", // Added
+    contactEmail: "innostudio@gmail.com", // Added
     banner1Title: "Ready for a Transformation?",
     banner1Text: "Your best look is just one appointment away.",
     banner2Title: "Join Our Loyalty Program",
@@ -54,16 +54,16 @@ export const translations = {
     navBarbers: "Barberi",
     navContact: "Kontakt",
     navReviews: "Recenzie",
-    heroTitle: "Precision. Presence. Peace.",
-    heroSubtitle: "Zažite precízne strihy a nadčasový štýl v modernom, minimalistickom prostredí.",
+    heroTitle: "Moderne. Čisto. Elegantne.",
+    heroSubtitle: "Vítaj v innostudio, štúdio, kde štýl hovorí za teba",
     aboutTitle: "Náš príbeh",
     aboutText:
       "INNO Studio, založené v roku 2025, je viac než len holičstvo; je to útočisko pre moderného gentlemana. Spájame tradičné techniky s modernými štýlmi, a to všetko v priestore navrhnutom pre relax a zdokonalenie. Naša filozofia je jednoduchá: poskytovať bezkonkurenčné služby a výnimočné strihy, zakaždým.",
     barbersTitle: "Zoznámte sa s barbermi",
     contactTitle: "Kontaktujte nás",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",
-    contactPhone: "0911 123 456", // Added
-    contactEmail: "kontakt@innostudio.com", // Added
+    contactPhone: "0904 163 648", // Added
+    contactEmail: "innostudio@gmail.com", // Added
     banner1Title: "Pripravený na premenu?",
     banner1Text: "Váš najlepší vzhľad je len jedno stretnutie ďaleko.",
     banner2Title: "Pridajte sa k nášmu vernostnému programu",
