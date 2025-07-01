@@ -8,7 +8,7 @@ export const translations = {
     heroSubtitle: "Welcome to innostudio, a studio where style speaks for you.",
     aboutTitle: "Our Story",
     aboutText:
-      "Founded in 2025, INNO Studio is more than just a barbershop; it's a sanctuary for the modern gentleman. We blend traditional techniques with contemporary styles, all within a space designed for relaxation and refinement. Our philosophy is simple: deliver unparalleled service and exceptional cuts, every single time.",
+      "At Innostudio, we bring the elegance and precision of a modern barbershop, where every detail tells a story. Our philosophy is simple — to offer exceptional service in a minimalist environment that will make you feel special and confident. Every cut is a masterpiece, created with an emphasis on purity and the perfect balance between style and functionality. With us, it's not just about styling your hair or beard, but a comprehensive experience that will strengthen your image and inner confidence. Enter a world where modern design and first-class service create a unique atmosphere for men who expect only the best.",
     barbersTitle: "Meet The Barbers",
     contactTitle: "Get In Touch",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",
@@ -54,11 +54,11 @@ export const translations = {
     navBarbers: "Barberi",
     navContact: "Kontakt",
     navReviews: "Recenzie",
-    heroTitle: "Moderne. Čisto. Elegantne.",
+    heroTitle: "Moderné. Čisté. Elegantné.",
     heroSubtitle: "Vítaj v innostudio, štúdio, kde štýl hovorí za teba",
     aboutTitle: "Náš príbeh",
     aboutText:
-      "INNO Studio, založené v roku 2025, je viac než len holičstvo; je to útočisko pre moderného gentlemana. Spájame tradičné techniky s modernými štýlmi, a to všetko v priestore navrhnutom pre relax a zdokonalenie. Naša filozofia je jednoduchá: poskytovať bezkonkurenčné služby a výnimočné strihy, zakaždým.",
+      "V Innostudio prinášame eleganciu a precíznosť moderného barbershopu, kde každý detail rozpráva príbeh. Naša filozofia je jednoduchá — ponúknuť výnimočný servis v minimalistickom prostredí, ktoré vás nechá zažiť pocit výnimočnosti a sebadôvery. Každý strih je majstrovským dielom, vytvoreným s dôrazom na čistotu  a perfektnú rovnováhu medzi štýlom a funkčnosťou. U nás nejde len o úpravu vlasov či brady, ale o komplexný zážitok, ktorý posilní váš imidž aj vnútornú istotu. Vstúpte do sveta, kde moderný dizajn a prvotriedny servis vytvárajú jedinečnú atmosféru pre mužov, ktorí očakávajú len to najlepšie.",
     barbersTitle: "Zoznámte sa s barbermi",
     contactTitle: "Kontaktujte nás",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",

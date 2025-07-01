@@ -356,22 +356,32 @@ const AboutSection = ({
   const hrColor = theme === "light" ? "bg-beige-400" : "bg-white"
   const paragraphColor = theme === "light" ? "text-zinc-700" : "text-gray-400"
 
+  // Split aboutText into 3 sections by sentence boundaries
+  const aboutSentences = t.aboutText.split(/(?<=[.!?])\s+/)
+  const section1 = aboutSentences.slice(0, 2).join(' ')
+  const section2 = aboutSentences.slice(2, 4).join(' ')
+  const section3 = aboutSentences.slice(4).join(' ')
+  const aboutSections = [section1, section2, section3].filter(Boolean)
+
   return (
     <AnimatedSection
       id="about"
       theme={theme}
-      sideImageSrc={"/priestory/image3.jpeg"}
+      sideImageSrc={"/priestory/about.jpeg"}
       sideImageAlt={sideImageAlt}
       sideImagePosition={sideImagePosition}
     >
       <div className="text-center md:text-left border-b-2 pb-2">
         <h2 className={`text-3xl md:text-4xl font-bold tracking-tight uppercase ${headingColor}`}>{t.aboutTitle}</h2>
         <div className={`mt-4 h-1 w-24 ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} ${hrColor}`} />
-        <p
-          className={`mt-8 max-w-3xl ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} md:text-lg ${paragraphColor}`}
-        >
-          {t.aboutText}
-        </p>
+        {aboutSections.map((section, idx) => (
+          <p
+            key={idx}
+            className={`mt-8 max-w-3xl ${theme === "light" ? "mx-auto md:mx-0" : "mx-auto"} md:text-lg ${paragraphColor}${idx > 0 ? ' mt-8' : ''}`}
+          >
+            {section}
+          </p>
+        ))}
       </div>
     </AnimatedSection>
   )
