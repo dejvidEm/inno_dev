@@ -13,7 +13,7 @@ export const translations = {
     contactTitle: "Get In Touch",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",
     contactPhone: "0904 163 648", // Added
-    contactEmail: "innostudio@gmail.com", // Added
+    contactEmail: "innomenstudio@gmail.com", // Added
     banner1Title: "Ready for a Transformation?",
     banner1Text: "Your best look is just one appointment away.",
     banner2Title: "Join Our Loyalty Program",
@@ -63,7 +63,7 @@ export const translations = {
     contactTitle: "Kontaktujte nás",
     contactAddress: "Ivanská cesta 16733/15, Bratislava",
     contactPhone: "0904 163 648", // Added
-    contactEmail: "innostudio@gmail.com", // Added
+    contactEmail: "innomenstudio@gmail.com", // Added
     banner1Title: "Pripravený na premenu?",
     banner1Text: "Váš najlepší vzhľad je len jedno stretnutie ďaleko.",
     banner2Title: "Pridajte sa k nášmu vernostnému programu",
