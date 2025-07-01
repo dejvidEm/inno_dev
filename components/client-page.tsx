@@ -619,7 +619,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                     style={{ WebkitOverflowScrolling: 'touch' }}
                   >
                     <>
-                      <div className="flex flex-col items-center text-center w-full max-w-sm">
+                      <div className="flex flex-col items-center text-center w-full max-w-md">
                         <h3 className="text-3xl font-bold tracking-tight text-white mb-2">{barber.name}</h3>
                         <a
                           href={barber.instagram}
@@ -634,13 +634,13 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                         </a>
                         <div className="my-3 h-px w-20 bg-gray-500 mx-auto" />
                       </div>
-                      <div className="w-full max-w-sm text-center py-4 my-4">
+                      <div className="w-full max-w-md text-center py-4 my-4">
                         <h4 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-2">
                           {t.drawerBio}
                         </h4>
                         <p className="text-gray-200 text-base leading-relaxed">{barber.bio}</p>
                       </div>
-                      <div className="w-full max-w-sm mt-4">
+                      <div className="w-full max-w-md mt-4">
                         <Button
                           variant="outline"
                           size="lg"

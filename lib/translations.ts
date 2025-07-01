@@ -24,17 +24,16 @@ export const translations = {
     bookNow: "Book an appointment",
     learnMore: "Learn More",
     reviewsTitle: "Hear From Our Clients",
-    review1Text:
-      "Absolutely the best haircut I've had in years. The attention to detail is incredible. INNO Studio is my new go-to.",
-    review1Name: "John D.",
-    review2Text:
-      "A truly premium experience from start to finish. The atmosphere is relaxing, and the barbers are true artists. Highly recommend!",
-    review2Name: "Michael B.",
-    review3Text:
-      "Finally found a place that understands modern styles. Sam gave me the exact cut I wanted. Will be back for sure.",
-    review3Name: "Chris P.",
-    review4Text: "The hot towel shave was an experience in itself. Mike is a legend. Felt like a new man walking out.",
-    review4Name: "David R.",
+    review1Text: "INNOSTUDIO is top-notch! It’s the first time I left a haircut feeling like it really suited me. Precise work, great vibe in the studio.",
+    review1Name: "J. D.",
+    eview2Text: "Absolute satisfaction. The guys know what they’re doing. Fast, detailed, professional.",
+    review2Name: "M. N.",
+    review3Text: "Professional approach and awesome atmosphere. I felt right at home, I’ll definitely come back.",
+    review3Name: "J. K.",
+    review4Text: "The best haircut I’ve ever had. I recommend it to anyone who wants to look fresh.",
+    review4Name: "F. S.",
+    review5Text: "Stylish place, great people, and top-quality services. The haircut turned out perfect!",
+    review5Name: "J. J.",
     ctaBannerTitle: "Ready for Your Best Look Yet?", // New
     ctaBannerSubtitle: "Appointments are just a click away. Experience the art of grooming at INNO Studio.", // New
     ctaBannerButton: "Book Appointment", // New
@@ -75,17 +74,20 @@ export const translations = {
     learnMore: "Zistiť viac",
     reviewsTitle: "Čo Hovoria Naši Klienti",
     review1Text:
-      "Absolútne najlepší strih, aký som mal za posledné roky. Pozornosť k detailom je neuveriteľná. INNO Studio je moje nové obľúbené miesto.",
-    review1Name: "Ján D.",
+      "INNOSTUDIO je top! Prvýkrát som odišiel zo strihu s pocitom, že mi fakt sadol. Precízna robota, výborný vibe v štúdiu.",
+    review1Name: "J. D.",
     review2Text:
-      "Skutočne prémiový zážitok od začiatku do konca. Atmosféra je relaxačná a holiči sú skutoční umelci. Vrelo odporúčam!",
-    review2Name: "Michal B.",
+      "Maximálna spokojnosť. Chalani vedia, čo robia. Rýchli, detailní, profesionálni.",
+    review2Name: "M. N.",
     review3Text:
-      "Konečne som našiel miesto, ktoré rozumie moderným štýlom. Sam mi urobil presne taký strih, aký som chcel. Určite sa vrátim.",
-    review3Name: "Kristián P.",
+      "Profesionálny prístup a super atmosféra. Cítil som sa ako doma, určite sa vrátim.",
+    review3Name: "J. K.",
     review4Text:
-      "Horúci uterák na holenie bol zážitok sám o sebe. Mike je legenda. Cítil som sa ako nový človek, keď som odchádzal.",
-    review4Name: "Dávid R.",
+      "Najlepší strih, aký som mal. Odporúčam každému, kto chce vyzerať fresh.",
+    review4Name: "F. S.",
+    review5Text:
+    "Štýlové prostredie, super ľudia a špičkové služby. Strih vyšiel perfektne!",
+    review5Name: "J. J.",
     ctaBannerTitle: "Pripravený na svoj najlepší vzhľad?", // New
     ctaBannerSubtitle: "Termíny sú len na jedno kliknutie. Zažite umenie starostlivosti v INNO Studio.", // New
     ctaBannerButton: "Rezervovať Termín", // New
