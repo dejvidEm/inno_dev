@@ -582,9 +582,7 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                 className="flex flex-col items-center cursor-pointer w-full"
                 onClick={() => handleToggle(barber.name)}
               >
-                <div
-                  className={`relative h-96 w-64 rounded-none overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105`}
-                >
+                <div className={`relative h-96 w-64 rounded-none overflow-hidden border-4 ${cardBorderColor} group-hover:border-beige-400 transition-all duration-300 transform group-hover:scale-105 md:w-64 w-full max-w-xs sm:max-w-sm`}>
                   <Image
                     src={barber.imgSrc || "/placeholder.svg"}
                     alt={`Portrait of ${barber.name}`}
@@ -617,7 +615,8 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 bg-zinc-900/95 p-6 text-white flex flex-col justify-between items-center text-center"
+                    className="absolute inset-0 bg-zinc-900/95 p-6 text-white flex flex-col justify-between items-center text-center overflow-y-auto max-h-full md:rounded-lg w-full md:w-auto"
+                    style={{ WebkitOverflowScrolling: 'touch' }}
                   >
                     <>
                       <div className="flex flex-col items-center text-center w-full max-w-sm">
