@@ -210,7 +210,7 @@ const Header = () => {
           {/* Logo left */}
           <div className="flex-1 flex items-center min-w-0">
             <Link href="#hero" className="flex items-center gap-2 text-white z-[61]" onClick={closeMenu}>
-              <img src="/pics/new.png" alt="" className="w-28"/>
+              <img src="/pics/new.png" alt="" className="w-32 -mt-2"/>
             </Link>
           </div>
           {/* Center nav links (desktop only) */}
