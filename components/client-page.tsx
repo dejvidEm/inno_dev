@@ -954,6 +954,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="mt-10 border-t border-zinc-800 pt-6 pb-2 bg-zinc-950/80">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-gray-400 text-center">
+          <div>
+            <span className="font-semibold text-white">INNO Studio s.r.o.</span> &nbsp;|&nbsp; Ivanská cesta 16733/15, Bratislava &nbsp;|&nbsp; DIČ: 2122542092
+          </div>
+          <div className="flex gap-4 mt-2 md:mt-0">
+            <a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Privacy Policy</a>
+            <a href="/cookies-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Cookies Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
   )
 }
