@@ -4,6 +4,7 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import {
@@ -175,13 +176,26 @@ const Header = () => {
   const { t } = useLanguage()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isMobile = useMobile()
+  const pathname = usePathname()
 
-  const navItems = [
-    { href: "#about", label: t.navAbout },
-    { href: "#barbers", label: t.navBarbers },
-    { href: "#reviews", label: t.navReviews },
-    { href: "#contact", label: t.navContact },
-  ]
+  // Detect if we are on a legal page (privacy policy or cookies)
+  const isLegalPage = pathname.startsWith('/privacy-policy') || pathname.startsWith('/cookies')
+
+  const navItems = isLegalPage
+    ? [
+        { href: '/', label: t.navAbout },
+        { href: '/', label: t.navBarbers },
+        { href: '/', label: t.navReviews },
+        { href: '/', label: t.navContact },
+      ]
+    : [
+        { href: '#about', label: t.navAbout },
+        { href: '#barbers', label: t.navBarbers },
+        { href: '#reviews', label: t.navReviews },
+        { href: '#contact', label: t.navContact },
+      ]
+
+  const logoHref = isLegalPage ? '/' : '#hero'
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
@@ -199,9 +213,7 @@ const Header = () => {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-[60] px-4 py-3 md:px-6 transition-colors duration-300 ${
-          scrolled ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"
-        }`}
+        className={"fixed top-0 left-0 right-0 z-[60] px-4 py-3 md:px-6 bg-black/90 backdrop-blur-sm transition-colors duration-300"}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -209,16 +221,16 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between relative">
           {/* Logo left */}
           <div className="flex-1 flex items-center min-w-0">
-            <Link href="#hero" className="flex items-center gap-2 text-white z-[61]" onClick={closeMenu}>
+            <Link href={logoHref} className="flex items-center gap-2 text-white z-[61]" onClick={closeMenu}>
               <img src="/pics/new.png" alt="" className="w-32 -mt-2"/>
             </Link>
           </div>
           {/* Center nav links (desktop only) */}
           {!isMobile && (
             <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8">
-              {navItems.map((item) => (
+              {navItems.map((item, idx) => (
                 <Link
-                  key={item.href}
+                  key={item.label + idx}
                   href={item.href}
                   className="text-white hover:text-beige-200 transition-colors font-medium text-base uppercase tracking-wide"
                 >
@@ -957,17 +969,19 @@ const Footer = () => {
       <div className="mt-10 border-t border-zinc-800 pt-6 pb-2 bg-zinc-950/80">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-gray-400 text-center">
           <div>
-            <span className="font-semibold text-white">INNO Studio s.r.o.</span> &nbsp;|&nbsp; Ivanská cesta 16733/15, Bratislava &nbsp;|&nbsp; DIČ: 2122542092
+            <span className="font-semibold text-white">RYCAS Academy s. r. o.</span> &nbsp;|&nbsp; Doležalova 3424/15C, Bratislava - Ružinov &nbsp;|&nbsp; IČO: 57019151 &nbsp;|&nbsp; DIČ: 2122542092
           </div>
           <div className="flex gap-4 mt-2 md:mt-0">
-            <a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Privacy Policy</a>
-            <a href="/cookies-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Cookies Policy</a>
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Privacy Policy</a>
+            <a href="/cookies" target="_blank" rel="noopener noreferrer" className="hover:text-beige-100 underline transition-colors duration-200">Cookies Policy</a>
           </div>
         </div>
       </div>
     </footer>
   )
 }
+
+export { Header, Footer }
 
 export function ClientPage() {
   const { t } = useLanguage()
