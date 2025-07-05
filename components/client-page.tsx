@@ -966,7 +966,7 @@ const Footer = () => {
             <div className="mt-4 text-gray-400 text-center md:text-left">
               <div className="font-semibold mb-1">Otváracie hodiny</div>
               <div>Pon - Pia: 8:00 - 20:00</div>
-              <div>Sobota: zatvorené</div>
+              <div>Sobota: Na objednávku</div>
               <div>Nedeľa: zatvorené</div>
             </div>
           </div>
