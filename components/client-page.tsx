@@ -404,7 +404,7 @@ const PricingSection = () => {
   
   // Dynamic pricing data based on current language
   const pricingData = [
-    { service: t.pricingHaircut, price: "33€", duration: "30 min" },
+    { service: t.pricingHaircut, price: "30€", duration: "30 min" },
     { service: t.pricingCombo, price: "49€", duration: "50 min" },
     { service: t.pricingBeard, price: "19€", duration: "30 min" },
   ]
