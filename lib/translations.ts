@@ -74,20 +74,20 @@ export const translations = {
     learnMore: "Zistiť viac",
     reviewsTitle: "Čo Hovoria Naši Klienti",
     review1Text:
-      "INNOSTUDIO je top! Prvýkrát som odišiel zo strihu s pocitom, že mi fakt sadol. Precízna robota, výborný vibe v štúdiu.",
-    review1Name: "J. D.",
+      "Perfektný barbershop! Skvelý prístup, príjemná atmosféra a precízna práca. Bol som veľmi spokojný s výsledkom – presne podľa predstáv. Chlapci vedia, čo robia, a zároveň sa s nimi dá super porozprávať. Určite sa vrátim a odporúčam každému, kto hľadá kvalitu a profesionálny servis.",
+    review1Name: "T. V.",
     review2Text:
-      "Maximálna spokojnosť. Chalani vedia, čo robia. Rýchli, detailní, profesionálni.",
-    review2Name: "M. N.",
+      "Krásny nový barber shop .Chalani sú mladý šikovný,všetko robíš precízne vidno že ich táto robotka baví . Ja som bol u Lukáša Kociana a musím odporučiť top služba . Takých barberov ako sú oni v Bratislave asi nenájdeš . Tak šup vyskúšať a uvidíte že budete vrelo spokojný",
+    review2Name: "D. M.",
     review3Text:
-      "Profesionálny prístup a super atmosféra. Cítil som sa ako doma, určite sa vrátim.",
-    review3Name: "J. K.",
+      "za takú cenu si neviem predstaviť lepší servis ako v tomto barbershope, odporúčam, vždy odtial odchádzam spokojný a fresh",
+    review3Name: "M. M.",
     review4Text:
-      "Najlepší strih, aký som mal. Odporúčam každému, kto chce vyzerať fresh.",
-    review4Name: "F. S.",
+      "Barbershop odporúčam každemu kto hľada top servis, profesionálny prístup a pohodovú priateľsku atmosféru. Veľka vďaka chalani, robite to najlepšie, vždy top výsledok",
+    review4Name: "I. CH.",
     review5Text:
-    "Štýlové prostredie, super ľudia a špičkové služby. Strih vyšiel perfektne!",
-    review5Name: "J. J.",
+    "Innostudio je barbershop, ktorý detailne vystihuje pojem KVALITA. Krásny a moderný priestor, z ktorého určite vyjde spokojný každý zákazník, ktorý vyskúša ponúkané služby. Jednoznačne odporúčam :)",
+    review5Name: "M. M.",
     ctaBannerTitle: "Pripravený na svoj najlepší vzhľad?", // New
     ctaBannerSubtitle: "Termíny sú len na jedno kliknutie. Zažite umenie starostlivosti v INNOSTUDIO.", // New
     ctaBannerButton: "Rezervovať Termín", // New
