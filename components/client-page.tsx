@@ -46,7 +46,7 @@ const barbersData: Barber[] = [
     name: "Dominik \"Rynik\" Rybár",
     instagram: "https://www.instagram.com/ry.nik_/",
     imgSrc: "/photos/rynik.jpeg", // Updated image path
-    bio: 'Volám sa Dominik "Rynik" Rybar, som barber, ktorý miluje moderné účesy a precíznu prácu s nožnicami aj strojčekom. Barberingu sa venujem od strednej školy. Svoje zručnosti som zdokonaľoval na prestížnych školeniach pod vedením odborníkov ako Alan Beak, Hayden Cassidy a Menspire a mnoho ďalších. Vďaka týmto skúsenostiam prinášam klientom nielen štýlové a precízne strihy, ale aj individuálny prístup a servis na najvyššej úrovni. V Innostudio spájam minimalizmus s kvalitou, aby každý od nás odchádzal sebavedomý a spokojný.',
+    bio: 'Volám sa Dominik "Rynik" Rybar, som barber, ktorý miluje moderné účesy a precíznu prácu s nožnicami aj strojčekom. Barberingu sa venujem od strednej školy. Svoje zručnosti som zdokonaľoval na prestížnych školeniach pod vedením odborníkov ako Alan Beak, Hayden Cassidy a Menspire a mnoho ďalších. Vďaka týmto skúsenostiam prinášam klientom nielen štýlové a precízne strihy, ale aj individuálny prístup a servis na najvyššej úrovni. V INNOSTUDIO spájam minimalizmus s kvalitou, aby každý od nás odchádzal sebavedomý a spokojný.',
   },
 ]
 
@@ -921,7 +921,7 @@ const Footer = () => {
               <img src="pics/new.png" alt="" className="w-40"/>
             </Link>
             <p className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} INNO Studio. <br className="sm:hidden" />
+              &copy; {new Date().getFullYear()} INNOSTUDIO. <br className="sm:hidden" />
               Všetky práva vyhradené.
             </p>
           </div>

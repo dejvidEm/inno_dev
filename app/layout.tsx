@@ -12,7 +12,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "INNO Studio",
+  title: "INNOSTUDIO",
   description: "Mastering the Art of Grooming",
     generator: 'v0.dev'
 }
