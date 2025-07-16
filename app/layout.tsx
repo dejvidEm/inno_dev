@@ -14,7 +14,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "INNOSTUDIO",
   description: "Mastering the Art of Grooming",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+    icons: {
+      icon: "/favicon.ico", // alebo "/favicon.png"
+    },
 }
 
 export default function RootLayout({
