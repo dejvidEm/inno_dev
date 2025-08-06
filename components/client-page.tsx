@@ -7,6 +7,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import GoogleMap from '@/components/Map';
 import {
   Scissors,
   MapPin,
@@ -619,6 +620,10 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                   <Instagram size={24} />
                   <span className="sr-only">Instagram</span>
                 </a>
+                <div className="flex flex-row gap-3 pt-2 justify-center">
+                          <p className="text-gray-400">SK</p>
+                          <p className="text-gray-400">EN</p>
+                        </div>
               </div>
               <AnimatePresence>
                 {expandedBarber === barber.name && (
@@ -637,13 +642,17 @@ const BarbersSection = ({ theme }: { theme: Theme }) => {
                           href={barber.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mb-4 flex items-center gap-2 text-pink-500 hover:text-pink-600 transition-colors"
+                          className="mb-4 flex items-center gap-2 pt-2 text-pink-500 hover:text-pink-600 transition-colors"
                           aria-label={`Instagram ${barber.name}`}
                           onClick={e => e.stopPropagation()}
                         >
                           <Instagram size={24} />
                           <span className="sr-only">Instagram</span>
                         </a>
+                        <div className="flex flex-row gap-2 justify-center">
+                          <p className="text-gray-400">SK</p>
+                          <p className="text-gray-400">EN</p>
+                        </div>
                         <div className="my-3 h-px w-20 bg-gray-500 mx-auto" />
                       </div>
                       <div className="w-full max-w-md text-center py-4 my-4">
@@ -1032,6 +1041,7 @@ export function ClientPage() {
         </div>
         <CallToActionBanner outerRef={ctaBannerRef} />
       </main>
+      <GoogleMap />
       <Footer />
       <BookNowButton isCtaVisible={isCtaBannerInView} />
     </div>
