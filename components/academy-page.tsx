@@ -17,6 +17,8 @@ import {
   GraduationCap,
   Users,
   User,
+  ChevronRight,
+  ChevronLeft,
 } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 import { SharedHeader } from "@/components/shared-header"
@@ -38,14 +40,14 @@ const instructorsData: Instructor[] = [
     specialty: "Classic Techniques & Precision Cuts",
     imgSrc: "/photos/academy4.jpeg",
     bio: "Lucas sám začínal strihávať v Žiline u rodičov na balkóne, kde strihával iba blízkych ľudí z rodiny a pár kamarátov. Rozhodol sa presťahovať do Bratislavy a začať novú kariéru.Za dva mesiace sa stal v BEGENTLEMAN plne obsadeným barberom. Bol hlavným školiteľom BEGENTLEMAN a následne sa osamostatnil a stal sa spoluzakladateľom INNOSTUDIO a INNOACADEMY.\n\nLucas je Ambasádorom švédskej značky Noberu of Sweden. Absolvoval svetové školenia ako napríklad od Alan Beak, Hayden Cassidy a od tímu MENSPIRE a takisto vyhral BarberBattle v Záhrebe.\n\nMomentálne je aktívnym školiteľom a barberom v INNOACADEMY a je pripravený posúvať svoju vášeň a vedomosti ďalším talentovaným barberom.",
-    experience: "15 rokov skúseností",
+    experience: "EDUCATOR / HAIRSTYLIST / BARBER",
   },
   {
     name: "Dominik 'Rynik' Rybár",
     specialty: "Advanced Styling & Business Skills",
     imgSrc: "/photos/academy4.jpeg",
     bio: "Dominik má 26 rokov a pochádza zo Svätého Jura. Strihaniu sa venuje už viac ako 6 rokov. Jeho cesta barbera sa začala už na strednej škole, kde si rád upravoval vlastné vlasy a napadlo mu skúsiť strihať kamarátov a spolužiakov.Prvé skúsenosti získaval v detskej izbe a učil sa najmä z YouTube videí. Po roku absolvoval akreditovaný barberský kurz, kde si osvojil základné techniky a vybudoval pevné základy.\n\nNásledne nastúpil do Begentleman, kde sa nielen zdokonalil v praxi, ale zúčastnil sa aj školení a workshopov od slovenských aj zahraničných barberov. Časom sa stal plne vybookovaným barberom a zároveň aj školiteľom v Begentleman Academy.\n\nDoteraz odškolil viaceré kurzy pre začiatočníkov aj niekoľko individuálnych školení, kde sa mohol podeliť o svoje skúsenosti a pomôcť ďalším barberom rásť. Po 5 rokoch sa osamostatnil a stal sa spoluzakladateľom INNOSTUDIO.",
-    experience: "15 rokov skúseností",
+    experience: "EDUCATOR / HAIRSTYLIST / BARBER",
   },
 ]
 
@@ -336,17 +338,17 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
                   <div className={`text-sm ${optionTextColor}`}>za osobu</div>
                 </div>
               </div>
-              <h3 className={`text-2xl font-bold ${optionTitleColor} mb-4`}>1 na 1 alebo 1 na 2</h3>
+              <h3 className={`text-2xl font-bold ${optionTitleColor} mb-4`}> 1-2-1 PRIVATE EDUCATION</h3>
               <p className={`${optionTextColor} leading-relaxed mb-6`}>{t.academyOption1Text}</p>
 
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>40</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>7</div>
                     <div className={`text-xs ${optionTextColor}`}>Celkovo hodín</div>
                   </div>
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>8</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>1</div>
                     <div className={`text-xs ${optionTextColor}`}>Trvanie</div>
                   </div>
                 </div>
@@ -354,10 +356,12 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
                 <div className="border-t pt-4">
                   <h4 className={`font-semibold ${optionTitleColor} mb-2`}>Čo kurz obsahuje:</h4>
                   <ul className={`text-sm ${optionTextColor} space-y-1`}>
-                    <li>• Osobný inštruktor venovaný vám</li>
-                    <li>• Flexibilné plánovanie hodín</li>
-                    <li>• Certifikát po absolvovaní</li>
-                    <li>• Podpora po kurze</li>
+                    <li>• Precízny fading a nožnicové strihy</li>
+                    <li>• Detailný styling a profesionálna úprava brady</li>
+                    <li>• Filozofia barberingu – technika a kreativita</li>
+                    <li>• Individuálny prístup lektora počas celého školenia</li>
+                    <li>• Priestor na otázky a okamžité riešenia v praxi</li>
+                    <li>• Pretavenie vedomostí do vlastného štýlu</li>
                   </ul>
                 </div>
               </div>
@@ -386,23 +390,24 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>50</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>10</div>
                     <div className={`text-xs ${optionTextColor}`}>Celkovo hodín</div>
                   </div>
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>10</div>
-                    <div className={`text-xs ${optionTextColor}`}>Trvanie</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>30</div>
+                    <div className={`text-xs ${optionTextColor}`}>Dní</div>
                   </div>
                 </div>
 
                 <div className="border-t pt-4">
                   <h4 className={`font-semibold ${optionTitleColor} mb-2`}>Čo kurz obsahuje:</h4>
                   <ul className={`text-sm ${optionTextColor} space-y-1`}>
-                    <li>• Profesionálny prístup k začiatočníkovi</li>
-                    <li>• Flexibilne plánovanie hodín</li>
-                    <li>• Digitálne učebné materiály</li>
-                    <li>• Certifikát po absolvovaní</li>
-                    <li>• 6 mesiacov podpory po kurze</li> 
+                    <li>• Správna práca so strojčekom a nožnicami</li>
+                    <li>• Základy fadingu a prechodu medzi dĺžkami</li>
+                    <li>• Strihanie a úprava dlhých vlasov</li>
+                    <li>• Styling a finálna prezentácia klienta</li>
+                    <li>• Technické zručnosti a tvorba vlastného štýlu</li>
+                    <li>• Dôraz na prax a istotu v rukách</li> 
                   </ul>
                 </div>
               </div>
@@ -414,133 +419,254 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
   )
 }
 
-const ContactFormSection = ({ theme }: { theme: Theme }) => {
-  const { t } = useLanguage()
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    option: "",
-    message: "",
-  })
+const SWIPE_THRESHOLD_PX = 40     // koľko treba potiahnuť
+const SWIPE_VELOCITY = 400        // a/alebo akou rýchlosťou
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
-
-  const headingColor = theme === "light" ? "text-zinc-900" : "text-white"
-  const hrColor = theme === "light" ? "bg-beige-400" : "bg-white"
-  const textColor = theme === "light" ? "text-zinc-700" : "text-gray-300"
-  const formBgColor = theme === "light" ? "bg-white" : "bg-zinc-800"
-  const inputBgColor = theme === "light" ? "bg-white" : "bg-zinc-700"
-  const inputBorderColor = theme === "light" ? "border-gray-300" : "border-gray-600"
-  const inputTextColor = theme === "light" ? "text-zinc-900" : "text-white"
-
-  return (
-    <AnimatedSection
-      id="contact"
-      theme={theme}
-      sideImageSrc="/photos/academy1.jpeg"
-      sideImageAlt="Students learning barbering"
-      sideImagePosition="left"
-    >
-      <div className="text-center">
-        <h2 className={`text-3xl md:text-4xl font-bold tracking-tight uppercase ${headingColor}`}>
-          {t.academyContactTitle}
-        </h2>
-        <div className={`mt-4 h-1 w-24 mx-auto ${hrColor}`} />
-        <p className={`mt-6 ${textColor} md:text-lg`}>{t.academyContactText}</p>
-
-        <motion.form
-          onSubmit={handleSubmit}
-          className={`mt-8 ${formBgColor} p-6 rounded-lg shadow-lg max-w-md mx-auto`}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <div className="space-y-4">
-            <div>
-              <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
-                {t.academyFormName} <span className="text-red-500">*</span>
-              </label>
-              <Input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
-              />
+const PhotoSwiper = ({
+    images,
+    alt = "Gallery image",
+  }: {
+    images: string[]
+    alt?: string
+  }) => {
+    const [index, setIndex] = useState(0)
+    const [direction, setDirection] = useState<1 | -1>(1)
+  
+    const go = (dir: 1 | -1) => {
+      if (!images?.length) return
+      setDirection(dir)
+      setIndex((i) => (i + dir + images.length) % images.length)
+    }
+  
+    const variants = {
+      enter: (dir: 1 | -1) => ({ x: dir * 40, opacity: 0 }),
+      center: { x: 0, opacity: 1 },
+      exit: (dir: 1 | -1) => ({ x: -dir * 40, opacity: 0 }),
+    }
+  
+    return (
+      // na ≥md vyplní výšku stĺpca
+      <div className="w-full md:h-full flex flex-col">
+        {/* šípky – iba na ≥md */}
+        <div className="hidden md:flex items-center justify-start gap-3 mb-3">
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            className="rounded px-3 py-2 bg-zinc-200 hover:bg-zinc-300 transition"
+            aria-label="Previous image"
+          >
+            <div className="flex items-center gap-2">
+              <ChevronLeft className="h-6 w-6" />
             </div>
-            <div>
-              <label className={`block text-sm  text-left font-medium ${textColor} mb-1`}>
-                {t.academyFormEmail} <span className="text-red-500">*</span>
-              </label>
-              <Input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
-              />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            className="rounded px-3 py-2 bg-zinc-200 hover:bg-zinc-300 transition"
+            aria-label="Next image"
+          >
+            <div className="flex items-center gap-2">
+              <ChevronRight className="h-6 w-6" />
             </div>
-            <div>
-              <label className={`block text-sm  text-left font-medium ${textColor} mb-1`}>{t.academyFormPhone}</label>
-              <Input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
-              />
-            </div>
-            <div>
-              <label className={`block text-sm  text-left font-medium ${textColor} mb-1`}>
-                {t.academyFormOption} <span className="text-red-500">*</span>
-              </label>
-              <select
-                name="option"
-                value={formData.option}
-                onChange={handleInputChange}
-                required
-                className={`w-full px-3 py-2 rounded-md border ${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400 focus:outline-none`}
-              >
-                <option value="">Vyberte typ kurzu</option>
-                <option value="1on1">{t.academyFormOption1}</option>
-                <option value="1on2">{t.academyFormOption2}</option>
-              </select>
-            </div>
-            <div>
-              <label className={`block text-sm  text-left font-medium ${textColor} mb-1`}>{t.academyFormMessage}</label>
-              <Textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-                className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
-              />
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-beige-400 hover:bg-beige-500 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
-            >
-              {t.academyFormSubmit}
-            </Button>
-          </div>
-        </motion.form>
+          </button>
+        </div>
+  
+        {/* stage – mobile portrait; na ≥md vyplní zvyšok výšky */}
+        <div className="relative w-full overflow-hidden rounded shadow-lg bg-zinc-100 dark:bg-zinc-800
+                        aspect-[3/4] md:aspect-auto md:flex-1 md:min-h-0">
+          <AnimatePresence custom={direction} mode="popLayout">
+            <motion.img
+              key={index}
+              src={images[index]}
+              alt={alt}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="absolute inset-0 h-full w-full object-cover select-none"
+              draggable={false}
+            />
+          </AnimatePresence>
+  
+          {/* touch swipe – na desktope vypnuté, aby šípky zostali klikateľné */}
+          <motion.div
+            className="absolute inset-0 md:pointer-events-none"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(_, info) => {
+              const { offset, velocity } = info
+              if (offset.x < -SWIPE_THRESHOLD_PX || velocity.x < -SWIPE_VELOCITY) go(1)
+              else if (offset.x > SWIPE_THRESHOLD_PX || velocity.x > SWIPE_VELOCITY) go(-1)
+            }}
+            whileTap={{ cursor: "grabbing" }}
+          />
+        </div>
+  
+        {/* indikátory */}
+        <div className="mt-3 flex justify-center gap-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => {
+                if (i === index) return
+                setDirection(i > index ? 1 : -1)
+                setIndex(i)
+              }}
+              className={`h-2.5 w-2.5 rounded-full transition ${
+                i === index ? "bg-beige-400" : "bg-zinc-300 dark:bg-zinc-600"
+              }`}
+              aria-label={`Go to image ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
-    </AnimatedSection>
-  )
-}
+    )
+  }
+  
+  const ContactFormSection = ({ theme }: { theme: Theme }) => {
+    const { t } = useLanguage()
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      option: "",
+      message: "",
+    })
+  
+    const handleInputChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    ) => {
+      const { name, value } = e.target
+      setFormData((prev) => ({ ...prev, [name]: value }))
+    }
+  
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault()
+      console.log("Form submitted:", formData)
+    }
+  
+    const headingColor = theme === "light" ? "text-zinc-900" : "text-white"
+    const hrColor = theme === "light" ? "bg-beige-400" : "bg-white"
+    const textColor = theme === "light" ? "text-zinc-700" : "text-gray-300"
+    const formBgColor = theme === "light" ? "bg-white" : "bg-zinc-800"
+    const inputBgColor = theme === "light" ? "bg-white" : "bg-zinc-700"
+    const inputBorderColor = theme === "light" ? "border-gray-300" : "border-gray-600"
+    const inputTextColor = theme === "light" ? "text-zinc-900" : "text-white"
+  
+    // max 3 fotky (cyklické)
+    const gallery = ["/photos/end1.jpeg", "/photos/academy2.jpeg", "/photos/end2.png"]
+  
+    return (
+      <AnimatedSection id="contact" theme={theme}>
+        {/* hlavička */}
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className={`text-3xl md:text-4xl font-bold tracking-tight uppercase ${headingColor}`}>
+            {t.academyContactTitle}
+          </h2>
+          <div className={`mt-4 h-1 w-24 mx-auto ${hrColor}`} />
+          <p className={`mt-6 ${textColor} md:text-lg`}>{t.academyContactText}</p>
+        </div>
+  
+        {/* 2 stĺpce; rovnaká výška na ≥md */}
+        <div className="mt-8 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-16 md:items-stretch">
+          {/* ĽAVO: galéria – žiadny sticky, nech sa zarovná výškou s formulárom */}
+          <div className="md:h-full">
+            <PhotoSwiper images={gallery} alt="Academy gallery" />
+          </div>
+  
+          {/* PRAVO: formulár – natiahnuť na výšku stĺpca */}
+          <motion.form
+            onSubmit={handleSubmit}
+            className={`${formBgColor} p-6 rounded-lg shadow-lg w-full md:max-w-none h-full flex flex-col`}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="space-y-4">
+              <div>
+                <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
+                  {t.academyFormName} <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
+                />
+              </div>
+              <div>
+                <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
+                  {t.academyFormEmail} <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
+                />
+              </div>
+              <div>
+                <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
+                  {t.academyFormPhone}
+                </label>
+                <Input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
+                />
+              </div>
+              <div>
+                <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
+                  {t.academyFormOption} <span className="text-red-500">*</span>
+                </label>
+                <select
+                  name="option"
+                  value={formData.option}
+                  onChange={handleInputChange}
+                  required
+                  className={`w-full px-3 py-2 rounded-md border ${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400 focus:outline-none`}
+                >
+                  <option value="">Vyberte typ kurzu</option>
+                  <option value="1on1">{t.academyFormOption1}</option>
+                  <option value="1on2">{t.academyFormOption2}</option>
+                </select>
+              </div>
+              <div>
+                <label className={`block text-sm text-left font-medium ${textColor} mb-1`}>
+                  {t.academyFormMessage}
+                </label>
+                <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className={`${inputBgColor} ${inputBorderColor} ${inputTextColor} focus:border-beige-400`}
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-beige-400 hover:bg-beige-500 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
+              >
+                {t.academyFormSubmit}
+              </Button>
+            </div>
+          </motion.form>
+        </div>
+      </AnimatedSection>
+    )
+  }
+  
 
 const Footer = () => {
   const { t } = useLanguage()
