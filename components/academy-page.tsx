@@ -45,7 +45,7 @@ const instructorsData: Instructor[] = [
   {
     name: "Dominik 'Rynik' Rybár",
     specialty: "Advanced Styling & Business Skills",
-    imgSrc: "/photos/academy4.jpeg",
+    imgSrc: "/photos/rynik.png",
     bio: "Dominik má 26 rokov a pochádza zo Svätého Jura. Strihaniu sa venuje už viac ako 6 rokov. Jeho cesta barbera sa začala už na strednej škole, kde si rád upravoval vlastné vlasy a napadlo mu skúsiť strihať kamarátov a spolužiakov.Prvé skúsenosti získaval v detskej izbe a učil sa najmä z YouTube videí. Po roku absolvoval akreditovaný barberský kurz, kde si osvojil základné techniky a vybudoval pevné základy.\n\nNásledne nastúpil do Begentleman, kde sa nielen zdokonalil v praxi, ale zúčastnil sa aj školení a workshopov od slovenských aj zahraničných barberov. Časom sa stal plne vybookovaným barberom a zároveň aj školiteľom v Begentleman Academy.\n\nDoteraz odškolil viaceré kurzy pre začiatočníkov aj niekoľko individuálnych školení, kde sa mohol podeliť o svoje skúsenosti a pomôcť ďalším barberom rásť. Po 5 rokoch sa osamostatnil a stal sa spoluzakladateľom INNOSTUDIO.",
     experience: "EDUCATOR / HAIRSTYLIST / BARBER",
   },
@@ -344,7 +344,7 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>7</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>8</div>
                     <div className={`text-xs ${optionTextColor}`}>Celkovo hodín</div>
                   </div>
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
@@ -390,11 +390,11 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>10</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>80</div>
                     <div className={`text-xs ${optionTextColor}`}>Celkovo hodín</div>
                   </div>
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
-                    <div className={`text-xl font-bold ${optionTitleColor}`}>30</div>
+                    <div className={`text-xl font-bold ${optionTitleColor}`}>10</div>
                     <div className={`text-xs ${optionTextColor}`}>Dní</div>
                   </div>
                 </div>
