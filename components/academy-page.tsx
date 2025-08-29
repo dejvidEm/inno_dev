@@ -195,7 +195,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
         >
-          <img src="/photos/inno_academy_logo.png" alt="" className="w-24 md:w-48"/>
+          <img src="/photos/inno_academy_logo.png" alt="" className="w-40 md:w-56"/>
         </motion.div>
         <motion.h1
           className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter uppercase"
