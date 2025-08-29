@@ -349,7 +349,7 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
                   </div>
                   <div className={`${theme === "light" ? "bg-gray-50" : "bg-zinc-700"} p-3 rounded-lg text-center`}>
                     <div className={`text-xl font-bold ${optionTitleColor}`}>1</div>
-                    <div className={`text-xs ${optionTextColor}`}>Trvanie</div>
+                    <div className={`text-xs ${optionTextColor}`}>Dní</div>
                   </div>
                 </div>
 
