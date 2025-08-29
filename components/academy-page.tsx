@@ -182,7 +182,7 @@ const HeroSection = () => {
         aria-hidden="true"
       />
       <motion.div
-        className="absolute bottom-16 md:bottom-20 left-1/2 text-white/70"
+        className="absolute bottom-16 md:bottom-20 left-1/2 text-white"
         style={{ x: "-50%", y: yBottomLine, opacity: opacityElements }}
         aria-hidden="true"
       >
@@ -190,12 +190,12 @@ const HeroSection = () => {
       </motion.div>
       <div className="relative z-20 flex h-full flex-col items-center justify-center text-center text-white px-4">
         <motion.div
-          className="mb-6"
+          className="mb-16"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
         >
-          <GraduationCap className="h-16 w-16 md:h-20 md:w-20 text-beige-200 mx-auto" />
+          <img src="/photos/inno_academy_logo.png" alt="" className="w-24 md:w-48"/>
         </motion.div>
         <motion.h1
           className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter uppercase"
@@ -205,14 +205,6 @@ const HeroSection = () => {
         >
           {t.academyHeroTitle}
         </motion.h1>
-        <motion.p
-          className="mt-4 max-w-2xl text-md md:text-xl text-gray-300"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-        >
-          {t.academyHeroSubtitle}
-        </motion.p>
       </div>
     </section>
   )
@@ -363,10 +355,9 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
                   <h4 className={`font-semibold ${optionTitleColor} mb-2`}>Čo kurz obsahuje:</h4>
                   <ul className={`text-sm ${optionTextColor} space-y-1`}>
                     <li>• Osobný inštruktor venovaný vám</li>
-                    <li>• Profesionálny barberský set v cene</li>
-                    <li>• 5 hodín týždenne, flexibilné plánovanie</li>
+                    <li>• Flexibilné plánovanie hodín</li>
                     <li>• Certifikát po absolvovaní</li>
-                    <li>• 3 mesiace podpory po kurze</li>
+                    <li>• Podpora po kurze</li>
                   </ul>
                 </div>
               </div>
@@ -407,12 +398,11 @@ const TrainingOptionsSection = ({ theme }: { theme: Theme }) => {
                 <div className="border-t pt-4">
                   <h4 className={`font-semibold ${optionTitleColor} mb-2`}>Čo kurz obsahuje:</h4>
                   <ul className={`text-sm ${optionTextColor} space-y-1`}>
-                    <li>• Zdieľaný inštruktor (max 2 študenti)</li>
-                    <li>• Profesionálny barberský set v cene</li>
-                    <li>• 5 hodín týždenne, plánované hodiny</li>
+                    <li>• Profesionálny prístup k začiatočníkovi</li>
+                    <li>• Flexibilne plánovanie hodín</li>
+                    <li>• Digitálne učebné materiály</li>
                     <li>• Certifikát po absolvovaní</li>
-                    <li>• 2 mesiace podpory po kurze</li>
-                    <li>• Partner cvičenia</li>
+                    <li>• 6 mesiacov podpory po kurze</li> 
                   </ul>
                 </div>
               </div>

@@ -50,19 +50,19 @@ export const translations = {
     pricingBeard: "Beard Trim",
 
    // Academy page translations
-   academyHeroTitle: "INNOAcademy",
+   academyHeroTitle: "Educate. Inspire.",
    academyHeroSubtitle: "Master the craft of barbering with personalized training from industry professionals.",
    academyAboutTitle: "Learn From The Masters",
    academyAboutText:
-     "Our Academy offers exclusive one-on-one and small group training sessions with our master barbers. Whether you're starting your journey or looking to refine your skills, our personalized approach ensures you receive the attention and expertise needed to excel in the art of barbering.",
+     "Our Academy offers exclusive individual and small group courses with our barbers. Whether you are starting your journey or looking to perfect your skills, our personalized approach ensures that you receive the attention and expertise needed to succeed in this beautiful craft. The courses are designed to give you confidence and hands-on experience directly from a real barbershop environment.",
    academyInstructorsTitle: "Meet Your Instructors",
    academyOptionsTitle: "Training Options",
    academyOption1Title: "1-on-1 Training",
    academyOption1Text:
-     "Receive undivided attention from our master barbers. Perfect for beginners or those looking to master specific techniques. Includes personalized curriculum, hands-on practice, and direct feedback.",
+     "Individual training tailored to your specific needs. Together, we will focus on the techniques you want to master - from precise fading, through scissor cuts, to detailed styling and beard grooming. Each training is built on our barbering philosophy – a combination of technical perfection and creative expression. During the training, you have our full attention, space for questions, and practical solutions you can immediately apply in practice. The goal is for you to leave the training with new skills, strengthened confidence, and the ability to transform the knowledge gained into your own unique style in your salon.",
    academyOption2Title: "1-on-2 Training",
    academyOption2Text:
-     "Learn alongside a fellow student while still receiving personalized instruction. Great for friends or colleagues who want to learn together. More affordable while maintaining high-quality education.",
+     "Training for complete beginners who want to enter the world of barbering and learn the solid foundations of this craft. The course lasts 5 weekends (10 days), during which we will teach you everything step by step - from proper work with clippers and scissors, through the basics of fading, working with long hair, all the way to styling and the final presentation of the client. Our philosophy is to provide students not only with technical skills but also with a different perspective on hair and the ability to create their own style. The course is designed so that you leave with practical experience, confidence in your hands, and the self-assurance that allows you to begin working in a salon.",
    academyContactTitle: "Apply for Academy",
    academyContactText:
      "Ready to start your barbering journey? Fill out the form below and we'll get back to you within 24 hours.",
@@ -130,22 +130,22 @@ export const translations = {
     pricingCombo: "Combo strih + brada",
     pricingBeard: "Úprava brady",
     // Academy page translations
-    academyHeroTitle: "INNO Academy",
+    academyHeroTitle: "Educate. Inspire.",
     academyHeroSubtitle: "Ovládnite remeslo holičstva s personalizovaným vzdelávaním od odborníkov z praxe.",
     academyAboutTitle: "Učte sa od majstrov",
     academyAboutText:
-      "Naša Akadémia ponúka exkluzívne individuálne a maloskupinové tréningy s našimi majstrami holičmi. Či už začínate svoju cestu alebo chcete zdokonaliť svoje zručnosti, náš personalizovaný prístup zabezpečuje, že dostanete pozornosť a odbornosť potrebnú na úspech v umení holičstva.",
+      "Naša Akadémia ponúka exkluzívne individuálne a maloskupinové kurzy s našimi barberbmi. Či už začínate svoju cestu alebo chcete zdokonaliť svoje zručnosti, náš personalizovaný prístup zabezpečuje, že dostanete pozornosť a odbornosť potrebnú na úspech v tomto krásnom umení. Kurzy sú navrhnuté tak, aby vám dali sebavedomie a praktické skúsenosti priamo z reálneho prostredia barbershopu.",
     academyInstructorsTitle: "Zoznámte sa s inštruktormi",
     academyOptionsTitle: "Možnosti vzdelávania",
     academyOption1Title: "1-na-1 Tréning",
     academyOption1Text:
-      "Získajte nedelenú pozornosť od našich majstrov holičov. Ideálne pre začiatočníkov alebo tých, ktorí sa chcú naučiť špecifické techniky. Zahŕňa personalizované učebné osnovy, praktické cvičenia a priamu spätnú väzbu.",
+      "Individialne  školenie prispôsobené na mieru vašim potrebám. Spoločne sa zameriame na techniky, ktoré chcete zdokonaliť - od precízneho fadingu, cez nožnicové strihy až po detailný styling a úpravu brady. Každé školenie  stojí na našej filozofii barberingu – kombinácii technickej dokonalosti a kreatívneho prejavu. Počas školenia máte našu plnú pozornosť, priestor na otázky a praktické riešenia, ktoré okamžite využijete v praxi. Cieľom je, aby ste z tréningu odchádzali s novými zručnosťami, posilneným sebavedomím a schopnosťou pretaviť získané vedomosti do vlastného jedinečného štýlu vo svojom salóne.",
     academyOption2Title: "1-na-2 Tréning",
     academyOption2Text:
-      "Učte sa spolu s ďalším študentom a stále dostávajte personalizované vzdelávanie. Skvelé pre priateľov alebo kolegov, ktorí sa chcú učiť spolu. Cenovo dostupnejšie pri zachovaní vysokej kvality vzdelávania.",
+      "Školenie pre úplných začiatočníkov, ktorí chcú vstúpiť do sveta barberingu a naučiť sa pevné základy tohto remesla. Kurz trvá 5 víkendov (10 dní), počas ktorých vás krok za krokom naučíme všetko potrebné - od správnej práce so strojčekom a nožnicami, cez základy fadingu, prácu s dlhými vlasmi, až po styling a finálnu prezentáciu klienta. Našou filozofiou je poskytnúť študentom nielen technické zručnosti, ale aj iný pohľad na vlasy a schopnosť vytvoriť si vlastný štýl. Kurz je navrhnutý tak, aby ste odchádzali s praktickými skúsenosťami, istotou v rukách a sebavedomím, ktoré vám umožní začať pôsobiť v salóne.",
     academyContactTitle: "Prihláška do Akadémie",
     academyContactText:
-      "Pripravený začať svoju cestu v holičstve? Vyplňte formulár nižšie a ozveme sa vám do 24 hodín.",
+      "Pripravený začať svoju cestu barbera? Vyplňte formulár nižšie a ozveme sa vám do 24 hodín.",
     academyFormName: "Celé meno",
     academyFormEmail: "Emailová adresa",
     academyFormPhone: "Telefónne číslo",
